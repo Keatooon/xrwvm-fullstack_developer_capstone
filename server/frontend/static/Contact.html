@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealerships</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensure image fits within its container and no overflow */
+        .container {
+            box-sizing: border-box;
+        }
+        .image-wrapper {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-teal-400 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-semibold text-black">Dealerships</a>
+            <div>
+                <a href="/" class="text-black px-4">Home</a>
+                <a href="/about" class="text-black px-4">About Us</a>
+                <a href="/contact" class="text-black px-4">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto mt-8 p-4 bg-white rounded-lg shadow-lg">
+        <!-- Image Wrapper to Control Overflow -->
+        <div class="image-wrapper">
+            <img src="/static/contactus.png" alt="Car Dealership" class="w-full h-auto max-w-full rounded-t-lg">
+        </div>
+
+        <!-- Contact Information -->
+        <div class="flex items-center mt-8 p-4 border-t border-gray-300">
+            <!-- Left Box with Vertical Centering -->
+            <div class="flex items-center justify-center w-full max-w-xs">
+                <div class="bg-teal-400 p-4 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 5a2 2 0 00-2 2v6a2 2 0 002 2h4l3 3v-3h7a2 2 0 002-2V7a2 2 0 00-2-2H2z" />
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Vertical Line -->
+            <div class="border-l border-gray-300 h-32 mx-4"></div> <!-- Adjust height as needed -->
+
+            <!-- Right Box with Vertical Centering -->
+            <div class="flex items-center justify-center w-full max-w-xl">
+                <div class="text-right">
+                    <p class="text-blue-700 font-semibold">Contact Our Concierge Service</p>
+                    <p>concierge@luxuryautos.com</p>
+                    <p class="text-blue-700 font-semibold mt-2">Reach Our Exclusive Marketing Team</p>
+                    <p>Marketing@luxuryautos.com</p>
+                    <p class="text-blue-700 font-semibold mt-2">Get in Touch with Our Public Relations Team</p>
+                    <p>PR@luxuryautos.com</p>
+                    <p class="text-blue-700 font-semibold mt-2">Contact the Luxury Autos Headquarters</p>
+                    <p>012-128393012</p>
+                    <p class="mt-4">Become a Luxury Autos Partner</p>
+                    <p>Visit partnerwithluxuryautos.com</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
