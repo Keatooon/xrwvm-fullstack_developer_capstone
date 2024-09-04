@@ -3,6 +3,7 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 from . import views
+from django.views.generic import TemplateView
 
 app_name = 'djangoapp'
 urlpatterns = [
@@ -20,8 +21,10 @@ urlpatterns = [
     path(route='get_dealers/<str:state>', view=views.get_dealerships, name='get_dealers_by_state'),
 
     # path for dealer reviews view
+    path(route='reviews/dealer/<int:dealer_id>', view=views.get_dealer_reviews, name='dealer_details'),
 
     # path for add a review view
+    path('postreview/<int:dealer_id>',TemplateView.as_view(template_name="index.html")),
 
     # path for get_cars view
     path(route='get_cars', view=views.get_cars, name ='getcars'),
