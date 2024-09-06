@@ -52,7 +52,6 @@ def analyze_review_sentiments(text):
         print(f"Network exception occurred: {e}")
 
 
-
 # def post_review(data_dict):
 # Add code for posting review
 def post_review(data_dict):

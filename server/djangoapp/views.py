@@ -17,7 +17,6 @@ from .populate import initiate
 from .models import CarMake, CarModel
 
 from .restapis import get_request, analyze_review_sentiments
-#,post_review
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -83,7 +82,7 @@ def registration(request):
         User.objects.get(username=username)
         username_exist = True
     except Exception as e:
-        print("Error: {e}")
+        print(f"Error: {e}")
         # If not, simply log this is a new user
         # logger.debug("{} is new user".format(username))
 
@@ -161,7 +160,7 @@ def add_review(request):
             # response = post_review(data)
             return JsonResponse({"status": 200})
         except Exception as e:
-            print("Error: {e}")
+            print(f"Error: {e}")
             return JsonResponse(
                 {
                     "status": 401,
@@ -171,7 +170,7 @@ def add_review(request):
     else:
         return JsonResponse(
             {
-                "status": 403, 
+                "status": 403,
                 "message": "Unauthorized"
             }
     )
