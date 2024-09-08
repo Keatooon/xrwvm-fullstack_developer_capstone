@@ -16,7 +16,9 @@ from .populate import initiate
 
 from .models import CarMake, CarModel
 
-from .restapis import get_request, analyze_review_sentiments
+from .restapis import get_request, analyze_review_sentiments, post_review
+
+import traceback  # Import to get detailed error logs
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -159,7 +161,10 @@ def add_review(request):
         try:
             response = post_review(data)
             return JsonResponse({"status":200})
-        except:
-            return JsonResponse({"status":401,"message":"Error in posting review"})
+        except Exception as e:
+            # Log the error with traceback
+            error_message = str(e)
+            error_traceback = traceback.format_exc()  # Full stack trace (optional)
+            return JsonResponse({"status": 401, "message": "Error in posting review", "error": error_message})
     else:
         return JsonResponse({"status":403,"message":"Unauthorized"})
